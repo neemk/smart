@@ -22,6 +22,33 @@ export default function Home() {
           alt=""
         />
       </div>
+      <div className="section">
+        <h2 className="section-title">Groceries Delivered on Your Schedule</h2>
+        <div className="features">
+          <div className="feature">
+            <span className="feature-id">1</span>
+            <span className="feature-title">Build Your Order</span>
+            <p className="feature-content">
+              Customize your box & set a schedule of recurring deliveries
+            </p>
+          </div>
+          <div className="feature">
+            <span className="feature-id">2</span>
+            <span className="feature-title">Save Even More</span>
+            <p className="feature-content">
+              Get an extra 5-10% off thousands of products on Autoship
+            </p>
+          </div>
+          <div className="feature">
+            <span className="feature-id">3</span>
+            <span className="feature-title">You’re In Control</span>
+            <p className="feature-content">
+              Edit items, skip or pause Autoship, or place one-time orders
+              anytime
+            </p>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

@@ -288,6 +288,47 @@ input:focus {
   padding-bottom: 40px;
 }
 
+.section {
+  padding: 50px 0;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  border-top: #000 1px solid;
+  border-bottom: #000 1px solid;
+  padding: 40px 0;
+}
+
+.feature {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.feature-id {
+  display: block;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.feature-title {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.features > .feature:nth-child(2) {
+  border-left: #000 1px solid;
+  border-right: #000 1px solid;
+}
+
+.feature-content {
+  font-size: 16px;
+}
+
 .about-layout {
   display: grid;
   grid-template-columns: 1fr auto;
