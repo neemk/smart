@@ -9,6 +9,7 @@ import ProductDetails from "./components/ProductDetails";
 import ProductDetailInfo from "./components/ProductDetailInfo";
 import ProductDetailNutrition from "./components/ProductDetailNutrition";
 import ProductDetailStorage from "./components/ProductDetailStorage";
+import Footer from "./components/Footer";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -54,6 +55,7 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
+      <Footer />
     </>
   );
 }

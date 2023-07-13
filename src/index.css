@@ -117,6 +117,7 @@ body {
 
 .footer {
   margin-top: 80px;
+  padding: 0 40px;
   background-color: #111;
   color: #fff;
   display: flex;
