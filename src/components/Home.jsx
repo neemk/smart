@@ -28,7 +28,7 @@ export default function Home() {
       <header className="header"></header>
 
       <div className="featured-products">
-        <h2 className="section-title">Our Products</h2>
+        <h2 className="heading-2 section-title">Our Products</h2>
         <div className="products">
           {products.map((product) => {
             return (
@@ -52,7 +52,7 @@ export default function Home() {
       </div>
 
       <div className="featured-categories">
-        <h2 className="section-title">The Essentials</h2>
+        <h2 className="heading-2 section-title">The Essentials</h2>
         <div className="categories">
           {categories.map((category) => {
             return (
