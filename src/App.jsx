@@ -30,16 +30,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route
-              path="/products"
-              element={
-                <Products
-                  cart={cart}
-                  onProductAdd={handleProductAdd}
-                  onProductDelete={handleProductDelete}
-                />
-              }
-            />
+            <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<ProductDetails />}>
               <Route
                 path=""
