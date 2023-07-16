@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
+import NikeLogo from "../assets/nike.svg";
 
 export default function Navbar() {
   return (
     <nav className="navbar">
       <NavLink to="/" className="nav-brand">
-        Smart
+        <img src={NikeLogo} />
       </NavLink>
       <ul>
         <li className="nav-item">
