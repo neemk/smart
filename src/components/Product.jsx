@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Product(props) {
   return (
     <div className="product">
-      <Link to="/product/1">
+      <Link to="/products/1">
         <img
           src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ea08d51f-4841-403c-bbc3-fc256164d05b/motiva-walking-shoes-Fjzkq7.png"
           alt="shoe"
