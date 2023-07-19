@@ -7,6 +7,7 @@ import Products from "./components/Products";
 import Cart from "./components/Cart";
 import ProductDetails from "./components/ProductDetails";
 import Footer from "./components/Footer";
+import Checkout from "./components/Checkout";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -30,6 +31,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<ProductDetails />}></Route>
             <Route path="/cart" element={<Cart cart={cart} />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </div>
         <Footer />
