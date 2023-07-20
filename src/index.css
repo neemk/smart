@@ -217,6 +217,7 @@ input {
   text-align: center;
   padding: 13px 20px;
   min-width: 75px;
+  border-bottom: solid 2px transparent;
 }
 
 .nav-item:hover a {
