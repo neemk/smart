@@ -115,6 +115,26 @@ body {
   padding-top: 20px;
 }
 
+/* INPUT */
+input {
+  width: 100%;
+  box-shadow: 0 0 0 1px #ccc;
+  border-radius: 4px;
+  border: none;
+  padding: 1rem 2rem 1rem 1rem;
+  font-size: 1rem;
+}
+
+.input-single {
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
 .header {
   height: 85vh;
   background: url("https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_915,c_limit/3d7f5d02-bf49-403a-a77f-04fc8680c54b/nike-just-do-it.jpg")
@@ -437,4 +457,47 @@ body {
   border-top: solid 1px rgb(229, 229, 229);
   border-bottom: solid 1px rgb(229, 229, 229);
   margin-bottom: 1.2rem;
+}
+
+.checkout-page-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  width: 900px;
+  margin: 0 auto;
+
+  padding-top: 5rem;
+
+  gap: 5rem;
+}
+
+.checkout-form--title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.checkout-form--title:nth-of-type(2) {
+  margin-top: 2rem;
+}
+
+.checkout-summary--subtotal,
+.checkout-summary--delivery,
+.checkout-summary--total {
+  color: #757575;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.checkout-summary--total {
+  color: #111;
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  padding: 0.8rem 0;
+}
+
+.checkout-summary--disclaimer {
+  font-size: 0.8rem;
+  margin-top: 1rem;
 }
