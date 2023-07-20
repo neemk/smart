@@ -1,13 +1,27 @@
 @font-face {
   font-family: "Helvetica";
   font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/HelveticaNeueRoman.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-style: normal;
   font-weight: 500;
-  src: local("Helvetica"), url("./fonts/Helvetica.woff") format("woff");
+  src: url("./fonts/HelveticaNeueMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/HelveticaNeueBold.woff") format("woff");
 }
 
 :root {
   --white: #fff;
-  --black: #000;
+  --black: #111111;
 
   /* Primary colors*/
   --primary-1: #2b8379;
@@ -76,8 +90,9 @@ select {
 body {
   font-family: "Helvetica", sans-serif;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5;
+  color: var(--black);
 }
 
 .text-semi-bold {
@@ -171,7 +186,7 @@ input {
 .footer {
   margin-top: 80px;
   padding: 0 40px;
-  background-color: #111;
+  background-color: var(--black);
   color: #fff;
   display: flex;
   align-items: center;
@@ -211,8 +226,7 @@ input {
 
 .nav-item a {
   text-decoration: none;
-  font-weight: 500;
-  color: var(--neutral-1);
+  color: var(--black);
   display: inline-block;
   text-align: center;
   padding: 13px 20px;
