@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Nike Air Force 1'07",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e6da41fa-1be4-4ce5-b89c-22be4f1f02d4/air-force-1-07-shoes-WrLlWX.png"
+    },
+    {
+      "id": 2,
+      "name": "Air Jordan 1 Elevate Low",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b31587b0-3d2a-4a59-b02e-720d4d0b8973/air-jordan-1-elevate-low-shoes-XlkVrM.png"
+    },
+    {
+      "id": 3,
+      "name": "Nike Air Force 1'07 LV8",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/441f9c14-6b81-43b1-a670-fc77d1317de2/air-force-1-07-lv8-shoes-pBxkmz.png"
+    }
+  ]
+}
