@@ -6,9 +6,8 @@ import About from "./components/About";
 import Products from "./components/Products";
 import Cart from "./components/Cart";
 import ProductDetails from "./components/ProductDetails";
-import ProductDetailInfo from "./components/ProductDetailInfo";
-import ProductDetailNutrition from "./components/ProductDetailNutrition";
-import ProductDetailStorage from "./components/ProductDetailStorage";
+import Footer from "./components/Footer";
+import Checkout from "./components/Checkout";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -29,30 +28,13 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route
-              path="/products"
-              element={
-                <Products
-                  cart={cart}
-                  onProductAdd={handleProductAdd}
-                  onProductDelete={handleProductDelete}
-                />
-              }
-            />
-            <Route path="/products/:id" element={<ProductDetails />}>
-              <Route
-                path=""
-                element={<ProductDetailInfo onProductAdd={handleProductAdd} />}
-              ></Route>
-              <Route
-                path="nutrition"
-                element={<ProductDetailNutrition />}
-              ></Route>
-              <Route path="storage" element={<ProductDetailStorage />}></Route>
-            </Route>
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetails />}></Route>
             <Route path="/cart" element={<Cart cart={cart} />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </>
   );
