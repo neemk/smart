@@ -20,16 +20,10 @@ const Transition = forwardRef(function Transition(props, ref) {
 });
 
 export default function Products(props) {
-  const [isOpen, setIsOpen] = useState(false);
-
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
     setOpen(!open);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
   };
 
   return (
