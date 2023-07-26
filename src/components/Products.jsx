@@ -1,17 +1,32 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
+
 import FilterSection from "./FilterSection";
 import ProductList from "./ProductList";
+import FilterDialog from "./FilterDialog";
 
 export default function Products(props) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
 
   return (
     <>
       <div>
-        <span onClick={() => setIsOpen(!isOpen)}>Hide Filters</span>
+        <span onClick={handleClick}>Hide Filters</span>
       </div>
+
+      {open && (
+        <div>
+          <FilterDialog handleClick={handleClick}>
+            <FilterSection />
+          </FilterDialog>
+        </div>
+      )}
+
       <div className="grid grid-filter-column pt-20">
-        {isOpen && (
+        {open && (
           <div className="filter-section">
             <FilterSection />
           </div>

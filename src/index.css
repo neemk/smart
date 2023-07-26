@@ -264,6 +264,12 @@ input {
   }
 }
 
+@media (min-width: 768px) {
+  .dialog-filter {
+    display: none;
+  }
+}
+
 .filter-group {
   text-align: left;
   margin-top: 7rem;
