@@ -24,16 +24,14 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar cart={cart} />
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/:id" element={<ProductDetails />}></Route>
-            <Route path="/cart" element={<Cart cart={cart} />} />
-            <Route path="/checkout" element={<Checkout />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetails />}></Route>
+          <Route path="/cart" element={<Cart cart={cart} />} />
+          <Route path="/checkout" element={<Checkout />} />
+        </Routes>
         <Footer />
       </BrowserRouter>
     </>

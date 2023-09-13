@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "./Button";
+import MaxWidthWrapper from "./MaxWidthWrapper";
 
 export default function Home() {
   const products = [
@@ -25,45 +26,51 @@ export default function Home() {
 
   return (
     <>
-      <header className="header"></header>
+      <MaxWidthWrapper>
+        <header className="header"></header>
 
-      <div className="featured-products">
-        <h2 className="heading-2 section-title">Our Products</h2>
-        <div className="products">
-          {products.map((product) => {
-            return (
-              <div className="product">
-                <img
-                  src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_579,c_limit/d8df9df7-c4e4-4eb3-bfd2-4754cb82070f/dri-fit-adv-aps-engineered-short-sleeve-fitness-top-DDWCtD.png"
-                  alt="shirt"
-                  className="product-img"
-                />
-                <div className="product-details">
-                  <div className="product-title">
-                    <span>{product.name}</span>
-                    <span>{product.title}</span>
+        <div className="featured-products">
+          <h2 className="heading-2 section-title">Our Products</h2>
+          <div className="products">
+            {products.map((product) => {
+              return (
+                <div className="product">
+                  <img
+                    src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_579,c_limit/d8df9df7-c4e4-4eb3-bfd2-4754cb82070f/dri-fit-adv-aps-engineered-short-sleeve-fitness-top-DDWCtD.png"
+                    alt="shirt"
+                    className="product-img"
+                  />
+                  <div className="product-details">
+                    <div className="product-title">
+                      <span>{product.name}</span>
+                      <span>{product.title}</span>
+                    </div>
+                    <div className="product-price">2000</div>
                   </div>
-                  <div className="product-price">2000</div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </div>
 
-      <div className="featured-categories">
-        <h2 className="heading-2 section-title">The Essentials</h2>
-        <div className="categories">
-          {categories.map((category) => {
-            return (
-              <div className="category">
-                <img src={category.img} alt="shirt" className="category-img" />
-                <Button className="category-btn">{category.name}</Button>
-              </div>
-            );
-          })}
+        <div className="featured-categories">
+          <h2 className="heading-2 section-title">The Essentials</h2>
+          <div className="categories">
+            {categories.map((category) => {
+              return (
+                <div className="category">
+                  <img
+                    src={category.img}
+                    alt="shirt"
+                    className="category-img"
+                  />
+                  <Button className="category-btn">{category.name}</Button>
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      </MaxWidthWrapper>
     </>
   );
 }
