@@ -27,12 +27,12 @@ export default function Products(props) {
           <LinkFiltersButton />
           <LinkSort />
         </div> */}
-        <div className="grid grid-cols-1 gap-5 lg:grid-cols-7">
-          <div className="sticky top-32 col-span-2 hidden max-h-[calc(100vh-150px)] self-start overflow-auto rounded-lg bg-white lg:block">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-7">
+          <div className="sticky top-16 col-span-1 hidden max-h-[calc(100vh-150px)] self-start overflow-auto rounded-lg bg-white lg:block">
             <LinkFilters />
           </div>
-          <div className="col-span-1 auto-rows-min grid-cols-1 lg:col-span-5 lg:pt-10">
-            <ul className="grid min-h-[66.5vh] grid-cols-3 gap-3">
+          <div className="col-span-1 auto-rows-min grid-cols-1 lg:col-span-6 lg:pt-10">
+            <ul className="grid min-h-[66.5vh] grid-cols-3 gap-4">
               {products.map((product) => {
                 return <Product key={product.id} details={product} />;
               })}

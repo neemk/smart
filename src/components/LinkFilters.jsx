@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 
 export default function LinkFilters() {
   return (
-    <div className="grid w-full rounded-md bg-white px-5 lg:divide-y lg:divide-gray-300">
+    <div className="grid w-full rounded-md bg-white lg:divide-y lg:divide-gray-300">
       <div className="grid gap-3 py-6">
         <div className="flex items-center justify-between">
           <h3 className="ml-1 mt-2 font-semibold">Filter Links</h3>
