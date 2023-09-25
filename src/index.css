@@ -3,24 +3,23 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 400;
+  font-family: "HelveticaNowText";
   src: url("./fonts/HelveticaNowText.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 500;
+  font-family: "HelveticaNowTextMedium";
   src: url("./fonts/HelveticaNowTextMedium.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: 700;
+  font-family: "HelveticaNowDisplayMedium";
   src: url("./fonts/HelveticaNowDisplayMedium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nike-TG";
+  src: url("./fonts/Nike-TG.woff2") format("woff2");
 }
 
 :root {
