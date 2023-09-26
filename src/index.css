@@ -91,11 +91,16 @@ select {
 }
 
 body {
-  font-family: "Helvetica", sans-serif;
+  font-family: "HelveticaNowText", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   color: var(--black);
+}
+
+a {
+  font-family: "HelveticaNowTextMedium", sans-serif;
+  color: #111111;
 }
 
 .text-semi-bold {
