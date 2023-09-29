@@ -4,12 +4,11 @@ import useMediaQuery from "./useMediaQuery";
 
 const FooterAccordionCumList = ({ title, children }) => {
   const [isOpen, setOpenState] = useState(false);
+  const { isDesktop } = useMediaQuery();
 
   const toggle = () => {
     setOpenState(!isOpen);
   };
-
-  const isActive = useMediaQuery("(max-width: 640px)");
 
   if (title) {
     return (
@@ -27,7 +26,7 @@ const FooterAccordionCumList = ({ title, children }) => {
             )}
           </button>
         </p>
-        {(isOpen || !isActive) && <div>{children}</div>}
+        {(isOpen || isDesktop) && <div>{children}</div>}
       </div>
     );
   } else {
