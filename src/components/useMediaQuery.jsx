@@ -1,22 +1,41 @@
 import { useEffect, useState } from "react";
 
-/**
- * Custom hook that tells you whether a given media query is active.
- *
- * Inspired by https://usehooks.com/useMedia/
- * https://gist.github.com/gragland/ed8cac563f5df71d78f4a1fefa8c5633
- */
-export default function useMediaQuery(query) {
-  const [matches, setMatches] = useState(false);
-  useEffect(
-    () => {
-      const mediaQuery = window.matchMedia(query);
-      setMatches(mediaQuery.matches);
-      const handler = (event) => setMatches(event.matches);
-      mediaQuery.addEventListener("change", handler);
-      return () => mediaQuery.removeEventListener("change", handler);
-    },
-    [] // Empty array ensures effect is only run on mount and unmount
-  );
-  return matches;
+export default function useMediaQuery() {
+  const [device, setDevice] = useState(null);
+  const [dimensions, setDimensions] = useState(null);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      if (window.matchMedia("(max-width: 640px)").matches) {
+        setDevice("mobile");
+      } else if (
+        window.matchMedia("(min-width: 641px) and (max-width: 1024px)").matches
+      ) {
+        setDevice("tablet");
+      } else {
+        setDevice("desktop");
+      }
+      setDimensions({ width: window.innerWidth, height: window.innerHeight });
+    };
+
+    // Initial detection
+    checkDevice();
+
+    // Listener for windows resize
+    window.addEventListener("resize", checkDevice);
+
+    // Cleanup listener
+    return () => {
+      window.removeEventListener("resize", checkDevice);
+    };
+  }, []);
+
+  return {
+    device,
+    width: dimensions?.width,
+    height: dimensions?.height,
+    isMobile: device === "mobile",
+    isTablet: device === "tablet",
+    isDesktop: device === "desktop",
+  };
 }
